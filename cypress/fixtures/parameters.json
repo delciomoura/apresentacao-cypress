@@ -1,0 +1,46 @@
+{
+    "message": {
+        "expectNoticeName": "Nome é obrigatório",
+        "expectNoticePhone": "Whatsapp é obrigatório",
+        "expectNoticeDescription": "Assunto é obrigatório",
+        "expectNotice": "Contato não encontrato",
+        "expectMessage": "Email e/ou senha incorreto",
+        "expectMessageEmail": "Oops. por favor informe seu e-mail",
+        "expectMessagePassword": "Oops. por favor informe sua senha"
+    },
+
+    "parameters": {
+        "contactNotRegistered": "84123456789",
+        "wrongPassword": "abc123",
+        "emptyEmail": "",
+        "emptyPassword": ""
+    },
+
+    "contacts": {
+        "0":{
+            "name": "Delcio 1",
+            "phone": "84-99999-9999",
+            "description": "description 1"
+        },
+        "1":{
+            "name": "Delcio 2",
+            "phone": "84-99992-9999",
+            "description": "description 2"
+        },
+        "2":{
+            "name": "Delcio 3",
+            "phone": "84-99993-9999",
+            "description": "description 3"
+        },
+        "3":{
+            "name": "Delcio 4",
+            "phone": "84-99994-9999",
+            "description": "description 4"
+        },
+        "4":{
+            "name": "Delcio 5",
+            "phone": "84-99995-9999",
+            "description": "description 5"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "pluginsFile": "cypress/plugins/index.js",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+      "reportDir": "mochawesome-report",
+      "overwrite": true,
+      "html": false,
+      "json": true,
+      "timestamp": "mmddyyyy_hhmmss"
+    }
+  }
