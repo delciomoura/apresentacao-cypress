@@ -1,31 +1,32 @@
-import notices from "../fixtures/parameters.json";
-const { expectNoticeName, expectNoticePhone, expectNoticeDescription } = notices.message || {};
+// import notices from "../fixtures/parameters.json";
+// const { expectNoticeName, expectNoticePhone, expectNoticeDescription } = notices.message || {};
+const faker = require('faker')
 
 const contacts = [
     {
-        "name": "Delcio Moura",
-        "number": "84-99999-9999",
-        "description": expectNoticeName
+        'name': `${faker.name.firstName("male")} ${faker.name.lastName()}`,
+        'number': `${faker.phone.phoneNumber('(84) 9####-####')}`,
+        'description': `${faker.lorem.words(5)}`,
     },
     {
-        "name": "Silvio Domingos",
-        "number": "11-98554-9999",
-        "description": expectNoticeDescription
+        'name': `${faker.name.firstName("female")} ${faker.name.lastName()}`,
+        'number': `${faker.phone.phoneNumber('(84) 9####-####')}`,
+        'description': `${faker.lorem.words(2)}`
     },
     {
-        "name": "Shel Wilkerson",
-        "number": "73-9675-9999",
-        "description": "Humilde QA"
+        'name': `${faker.name.firstName()} ${faker.name.lastName()}`,
+        'number': `${faker.phone.phoneNumber('(84) 9####-####')}`,
+        'description': `${faker.lorem.words(4)}`
     },
     {
-        "name": "Ana Paula",
-        "number": "81-95447-9999",
-        "description": expectNoticePhone
+        'name': `${faker.name.firstName()} ${faker.name.lastName()}`,
+        'number': `${faker.phone.phoneNumber('(84) 9####-####')}`,
+        'description': `${faker.lorem.words(3)}`
     },
     {
-        "name": "Filipe Isaac",
-        "number": "13-91234-9999",
-        "description": "Coordenador do PagSeguro"
+        'name': `${faker.name.firstName()} ${faker.name.lastName()}`,
+        'number': `${faker.phone.phoneNumber('(84) 9####-####')}`,
+        'description': `${faker.lorem.words(1)}`
     }
 ]
 

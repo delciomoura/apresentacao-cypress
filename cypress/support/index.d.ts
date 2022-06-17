@@ -39,7 +39,7 @@ declare namespace Cypress {
         * });
         * Cria um novo contato via requisição post
         */
-        requestcreateContact(): Chainable<any>
+        requestCreateContact(): Chainable<any>
 
         // ---------------------------------------------------- DOCUMENTATION SELECTORS ----------------------------------------------------
         /**
@@ -48,7 +48,7 @@ declare namespace Cypress {
         *  cy.visit('/dashboard')
         *  Acessa o dashboard do sistema
         */
-         visitDashboard(): Chainable<any>
+        visitDashboard(): Chainable<any>
 
         // ---------------------------------------------------- DOCUMENTATION VALIDATION ----------------------------------------------------
         /**
@@ -57,7 +57,18 @@ declare namespace Cypress {
        *  return cy.getContact(contact.number).should('not.exist')
        *  Verifica se o contato não foi localizado na lista
        */
-         validateIfContactWasNotFound(): Chainable<any>
+        validateIfContactWasNotFound(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands.js
+        *  Cypress.Commands.add('validateFileCreation', () => {
+            if (cy.readFile('cypress/fixtures/contacts.json')){
+                cy.log('Gerado com sucesso');
+            }
+        });
+        * Verifica se o arquivo JSON foi gerado e exibe a mensagem 'Gerado com sucesso' no log
+        */
+        validateFileCreation(): Chainable<any>
 
         // ---------------------------------------------------- DOCUMENTATION COMMANDS ----------------------------------------------------
         /**
@@ -66,6 +77,24 @@ declare namespace Cypress {
         *  cy.getContact(target).find('[data-cy=btn-remove]').click()
         *  Encontra o contato e clica no botão "Apagar" removendo o mesmo
         */
-         removeContact(): Chainable<any>
+        removeContact(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands.js
+        *  Cypress.Commands.add('generateFixture', () => {
+            const faker = require('faker')
+            cy.writeFile('cypress/fixtures/contacts.json', {
+                'contacts': Cypress._.times(5, () => {
+                    return {
+                        'name': `${faker.name.firstName()} ${faker.name.lastName()}`,
+                        'number': `${faker.phone.phoneNumber('(84) 9####-####')}`,
+                        'description': `${faker.lorem.words(3)}`
+                    }
+                })
+            });
+        });
+        * Gera um arquivo JSON com os contatos na pasta fixtures
+        */
+        generateFixture(): Chainable<any>
     }
 }

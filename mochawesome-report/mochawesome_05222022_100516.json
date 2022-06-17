@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-23T01:51:10.709Z",
+    "end": "2022-05-23T01:51:16.109Z",
+    "duration": 5400,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b9f99288-105b-4183-834c-c1dadc345eed",
+      "title": "",
+      "fullFile": "cypress/integration/contacts/contact_remove_spec.js",
+      "file": "cypress/integration/contacts/contact_remove_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3667f1f3-d714-434a-8eee-736b2a1379c6",
+          "title": "Remoção de um contato",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "51b50d71-fdda-4b12-8ec7-55f49b40b50f",
+              "title": "Dado que Delcio z7uv é o contato que será deletado",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando apago esse contato",
+                  "fullTitle": "Remoção de um contato Dado que Delcio z7uv é o contato que será deletado Quando apago esse contato",
+                  "timedOut": null,
+                  "duration": 3341,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contact_remove_spec.js/Quando apago esse contato -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.removeContact(_payload.contact.number);",
+                  "err": {},
+                  "uuid": "c1f719a8-7e3b-4218-ade7-f56b0d096233",
+                  "parentUUID": "51b50d71-fdda-4b12-8ec7-55f49b40b50f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Então o mesmo não deve ser exibido no dashboard",
+                  "fullTitle": "Remoção de um contato Dado que Delcio z7uv é o contato que será deletado Então o mesmo não deve ser exibido no dashboard",
+                  "timedOut": null,
+                  "duration": 35,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contact_remove_spec.js/Então o mesmo não deve ser exibido no dashboard -- after each hook.png\"",
+                  "code": "cy.validateIfContactWasNotFound(_payload.contact);",
+                  "err": {},
+                  "uuid": "39cc7bd7-e084-4ec8-89df-ca552a7d57ee",
+                  "parentUUID": "51b50d71-fdda-4b12-8ec7-55f49b40b50f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c1f719a8-7e3b-4218-ade7-f56b0d096233",
+                "39cc7bd7-e084-4ec8-89df-ca552a7d57ee"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3376,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_hhmmss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

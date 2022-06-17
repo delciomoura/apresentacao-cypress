@@ -1,0 +1,220 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-23T01:52:11.066Z",
+    "end": "2022-05-23T01:52:21.654Z",
+    "duration": 10588,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0e56e259-6eac-4e74-a184-c9f7fc397d04",
+      "title": "",
+      "fullFile": "cypress/integration/contacts/contacts_array_spec.js",
+      "file": "cypress/integration/contacts/contacts_array_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dc75dd39-4f86-4138-84b0-4042eaf5ed51",
+          "title": "Fluxo remoção de vários contatos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "ee8fee0d-2ef3-4d24-9497-131d7b8aad2b",
+              "title": "Dado que foram criados vários contatos",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando removo o contato Delcio Moura com número 84-99999-9999 e descrição Nome é obrigatório",
+                  "fullTitle": "Fluxo remoção de vários contatos Dado que foram criados vários contatos Quando removo o contato Delcio Moura com número 84-99999-9999 e descrição Nome é obrigatório",
+                  "timedOut": null,
+                  "duration": 4578,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contacts_array_spec.js/Quando removo o contato Delcio Moura com número 84-99999-9999 e descrição Nome é obrigatório -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.removeContact(contact.number);",
+                  "err": {},
+                  "uuid": "6215e84c-ae14-4b1d-b5dd-153f0c7f52c0",
+                  "parentUUID": "ee8fee0d-2ef3-4d24-9497-131d7b8aad2b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Quando removo o contato Silvio Domingos com número 11-98554-9999 e descrição Assunto é obrigatório",
+                  "fullTitle": "Fluxo remoção de vários contatos Dado que foram criados vários contatos Quando removo o contato Silvio Domingos com número 11-98554-9999 e descrição Assunto é obrigatório",
+                  "timedOut": null,
+                  "duration": 599,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contacts_array_spec.js/Quando removo o contato Silvio Domingos com número 11-98554-9999 e descrição Assunto é obrigatório -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.removeContact(contact.number);",
+                  "err": {},
+                  "uuid": "d47fb706-b74e-4ba5-8ad9-fc721ba2a6ed",
+                  "parentUUID": "ee8fee0d-2ef3-4d24-9497-131d7b8aad2b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Quando removo o contato Shel Wilkerson com número 73-9675-9999 e descrição Humilde QA",
+                  "fullTitle": "Fluxo remoção de vários contatos Dado que foram criados vários contatos Quando removo o contato Shel Wilkerson com número 73-9675-9999 e descrição Humilde QA",
+                  "timedOut": null,
+                  "duration": 545,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contacts_array_spec.js/Quando removo o contato Shel Wilkerson com número 73-9675-9999 e descrição Humilde QA -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.removeContact(contact.number);",
+                  "err": {},
+                  "uuid": "b5445311-797d-41cb-8908-11f923f6e8f7",
+                  "parentUUID": "ee8fee0d-2ef3-4d24-9497-131d7b8aad2b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Quando removo o contato Ana Paula com número 81-95447-9999 e descrição Whatsapp é obrigatório",
+                  "fullTitle": "Fluxo remoção de vários contatos Dado que foram criados vários contatos Quando removo o contato Ana Paula com número 81-95447-9999 e descrição Whatsapp é obrigatório",
+                  "timedOut": null,
+                  "duration": 568,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contacts_array_spec.js/Quando removo o contato Ana Paula com número 81-95447-9999 e descrição Whatsapp é obrigatório -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.removeContact(contact.number);",
+                  "err": {},
+                  "uuid": "08d798e8-66eb-414a-80f3-5bb9c3013d13",
+                  "parentUUID": "ee8fee0d-2ef3-4d24-9497-131d7b8aad2b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Quando removo o contato Filipe Isaac com número 13-91234-9999 e descrição Coordenador do PagSeguro",
+                  "fullTitle": "Fluxo remoção de vários contatos Dado que foram criados vários contatos Quando removo o contato Filipe Isaac com número 13-91234-9999 e descrição Coordenador do PagSeguro",
+                  "timedOut": null,
+                  "duration": 478,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contacts_array_spec.js/Quando removo o contato Filipe Isaac com número 13-91234-9999 e descrição Coordenador do PagSeguro -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.removeContact(contact.number);",
+                  "err": {},
+                  "uuid": "bc29a86e-50cb-461a-8743-23d565bdb7a5",
+                  "parentUUID": "ee8fee0d-2ef3-4d24-9497-131d7b8aad2b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Então todos os contatos serão removidos e não devem ser exibidos no dashboard",
+                  "fullTitle": "Fluxo remoção de vários contatos Dado que foram criados vários contatos Então todos os contatos serão removidos e não devem ser exibidos no dashboard",
+                  "timedOut": null,
+                  "duration": 59,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contacts_array_spec.js/Então todos os contatos serão removidos e não devem ser exibidos no dashboard -- after each hook.png\"",
+                  "code": "cy.validateIfContactWasNotFound(_array.contacts);",
+                  "err": {},
+                  "uuid": "c8740697-a3ab-4ce9-9286-4e45f9950fcd",
+                  "parentUUID": "ee8fee0d-2ef3-4d24-9497-131d7b8aad2b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6215e84c-ae14-4b1d-b5dd-153f0c7f52c0",
+                "d47fb706-b74e-4ba5-8ad9-fc721ba2a6ed",
+                "b5445311-797d-41cb-8908-11f923f6e8f7",
+                "08d798e8-66eb-414a-80f3-5bb9c3013d13",
+                "bc29a86e-50cb-461a-8743-23d565bdb7a5",
+                "c8740697-a3ab-4ce9-9286-4e45f9950fcd"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6827,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_hhmmss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

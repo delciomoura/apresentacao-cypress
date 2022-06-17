@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-23T01:51:36.910Z",
+    "end": "2022-05-23T01:51:43.673Z",
+    "duration": 6763,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eac0ad03-2334-474c-8f9c-d860be20bdae",
+      "title": "",
+      "fullFile": "cypress/integration/contacts/contact_search_spec.js",
+      "file": "cypress/integration/contacts/contact_search_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3e788135-be2c-4341-b1d7-b082d5cbf0f9",
+          "title": "Realizar busca por contato",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "48019414-e5c8-4351-a433-bd0406ff8199",
+              "title": "Dado que tenho o seguinte contato Delcio jrg0",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando faço a busca deste contato",
+                  "fullTitle": "Realizar busca por contato Dado que tenho o seguinte contato Delcio jrg0 Quando faço a busca deste contato",
+                  "timedOut": null,
+                  "duration": 3834,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contact_search_spec.js/Quando faço a busca deste contato -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.searchContact(_payload.contact.number);\ncy.validateFinishedLoading();",
+                  "err": {},
+                  "uuid": "2084836a-d826-4154-b6db-027062eb2a3b",
+                  "parentUUID": "48019414-e5c8-4351-a433-bd0406ff8199",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Então somente este contato deve ser exibido no dashboard",
+                  "fullTitle": "Realizar busca por contato Dado que tenho o seguinte contato Delcio jrg0 Então somente este contato deve ser exibido no dashboard",
+                  "timedOut": null,
+                  "duration": 43,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contact_search_spec.js/Então somente este contato deve ser exibido no dashboard -- after each hook.png\"",
+                  "code": "cy.validationOnlyOneContactDisplayed(_payload.contact);",
+                  "err": {},
+                  "uuid": "f957e0dc-03dc-431b-b8aa-0daf4fa0c46f",
+                  "parentUUID": "48019414-e5c8-4351-a433-bd0406ff8199",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2084836a-d826-4154-b6db-027062eb2a3b",
+                "f957e0dc-03dc-431b-b8aa-0daf4fa0c46f"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3877,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "5e464c5b-4f3c-4148-95ca-b1802250eae3",
+              "title": "Quando busco por um contato não cadastrado",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Então a mensagem \"Contato não encontrato\" deve ser exibida",
+                  "fullTitle": "Realizar busca por contato Quando busco por um contato não cadastrado Então a mensagem \"Contato não encontrato\" deve ser exibida",
+                  "timedOut": null,
+                  "duration": 694,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contact_search_spec.js/Então a mensagem \\\"Contato não encontrato\\\" deve ser exibida -- after each hook.png\"",
+                  "code": "cy.emptyListValidation();",
+                  "err": {},
+                  "uuid": "973c41e3-16e1-4713-9982-7078d3c44d22",
+                  "parentUUID": "5e464c5b-4f3c-4148-95ca-b1802250eae3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "973c41e3-16e1-4713-9982-7078d3c44d22"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 694,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_hhmmss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

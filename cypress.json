@@ -1,6 +1,7 @@
 {
     "pluginsFile": "cypress/plugins/index.js",
     "reporter": "mochawesome",
+    "watchForFileChanges": false,
     "reporterOptions": {
       "reportDir": "mochawesome-report",
       "overwrite": true,

@@ -43,3 +43,16 @@ Cypress.Commands.add("clickSaveButton", () => {
 Cypress.Commands.add('preserveSession', () => {
    Cypress.Cookies.preserveOnce('user_token');
 });
+
+Cypress.Commands.add('generateFixture', () => {
+   const faker = require('faker')
+   cy.writeFile('cypress/fixtures/contacts.json', {
+      'contacts': Cypress._.times(5, () => {
+            return {
+               'name': `${faker.name.firstName()} ${faker.name.lastName()}`,
+               'number': `${faker.phone.phoneNumber('(84) 9####-####')}`,
+               'description': `${faker.lorem.words(3)}`
+            }
+      })
+   });
+});

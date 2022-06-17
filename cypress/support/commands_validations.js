@@ -40,3 +40,9 @@ Cypress.Commands.add("externalLinkValidation", (contact) => {
 Cypress.Commands.add("dashboardValidation", () => {
     return cy.contains('h4', 'Seu gerenciador digital de contatos').should('be.visible')
 });
+
+Cypress.Commands.add('validateFileCreation', () => {
+    if (cy.readFile('cypress/fixtures/contacts.json')){
+       cy.log('Gerado com sucesso');
+   }
+ });

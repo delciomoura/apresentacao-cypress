@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-23T01:51:47.085Z",
+    "end": "2022-05-23T01:51:52.161Z",
+    "duration": 5076,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2796eabd-c7b5-427b-8652-da81895eb287",
+      "title": "",
+      "fullFile": "cypress/integration/contacts/contact_talk_spec.js",
+      "file": "cypress/integration/contacts/contact_talk_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3b071ccd-0a0b-41a0-8506-6f555456c74a",
+          "title": "Iniciar uma conversa com um contato",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "a3b3a9c5-4c00-4409-918b-ed01168671d3",
+              "title": "Dado que Delcio p2v9 é o contato desejado",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando acesso o dashboard",
+                  "fullTitle": "Iniciar uma conversa com um contato Dado que Delcio p2v9 é o contato desejado Quando acesso o dashboard",
+                  "timedOut": null,
+                  "duration": 2910,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contact_talk_spec.js/Quando acesso o dashboard -- after each hook.png\"",
+                  "code": "cy.visitDashboard();",
+                  "err": {},
+                  "uuid": "08c5e0cc-5ab6-4dec-b7b0-4ba3c6b55681",
+                  "parentUUID": "a3b3a9c5-4c00-4409-918b-ed01168671d3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Devo ver a propriedade href com o link do whatsapp web",
+                  "fullTitle": "Iniciar uma conversa com um contato Dado que Delcio p2v9 é o contato desejado Devo ver a propriedade href com o link do whatsapp web",
+                  "timedOut": null,
+                  "duration": 47,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contact_talk_spec.js/Devo ver a propriedade href com o link do whatsapp web -- after each hook.png\"",
+                  "code": "cy.externalLinkValidation(_payload.contact);",
+                  "err": {},
+                  "uuid": "d5caa576-d1df-4535-a90d-8020f3ff0b4a",
+                  "parentUUID": "a3b3a9c5-4c00-4409-918b-ed01168671d3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "08c5e0cc-5ab6-4dec-b7b0-4ba3c6b55681",
+                "d5caa576-d1df-4535-a90d-8020f3ff0b4a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2957,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_hhmmss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

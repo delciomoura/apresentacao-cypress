@@ -1,27 +1,29 @@
-[
+{
+  "contacts": [
     {
-        "name": "Delcio Moura",
-        "number": "84-99999-9999",
-        "description": "QA do time sorocaba"
+      "name": "Blaise Steuber",
+      "number": "(84) 96884-4792",
+      "description": "corporis commodi quas"
     },
     {
-        "name": "Silvio Domingos",
-        "number": "11-98554-9999",
-        "description": "QA especialista no PagSeguro"
+      "name": "Lorena Greenholt",
+      "number": "(84) 90847-4880",
+      "description": "veritatis ut ipsa"
     },
     {
-        "name": "Shel Wilkerson",
-        "number": "73-9675-9999",
-        "description": "Humilde QA"
+      "name": "Myrl Keeling",
+      "number": "(84) 90008-7151",
+      "description": "voluptatem a ut"
     },
     {
-        "name": "Ana Paula",
-        "number": "81-95447-9999",
-        "description": "QA do time briston"
+      "name": "Felipe Kshlerin",
+      "number": "(84) 97778-1626",
+      "description": "temporibus voluptas quas"
     },
     {
-        "name": "Filipe Isaac",
-        "number": "13-91234-9999",
-        "description": "Coordenador do PagSeguro"
+      "name": "Delfina O'Hara",
+      "number": "(84) 99597-5356",
+      "description": "nihil ea mollitia"
     }
-]
+  ]
+}

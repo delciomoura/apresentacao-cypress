@@ -27,7 +27,7 @@ Cypress.Commands.add("requestCreateUserAndLogin", (user) => {
     cy.get('.dashboard', {timeout: 5000}).should('be.visible')
 });
 
-Cypress.Commands.add("requestcreateContact", (contact) => {
+Cypress.Commands.add("requestCreateContact", (contact) => {
     cy.request({
         method: 'POST',
         url: 'http://localhost:3000/contacts',
