@@ -20,7 +20,7 @@
     "axios": "^0.24.0",
     "buefy": "^0.9.3",
     "core-js": "3.6.5",
-    "cypress": "^9.6.0",
+    "cypress": "^9.7.0",
     "cypress-localstorage-commands": "^1.7.0",
     "mocha": "8.1.3",
     "mochawesome": "6.1.1",
