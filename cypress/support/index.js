@@ -14,6 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import "cypress-localstorage-commands";
 import './commands'
 import './commands_requests'
 import './commands_selectors'

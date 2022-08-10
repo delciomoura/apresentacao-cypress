@@ -6,37 +6,34 @@ const { expectNotice } = notices.message || {};
 
 describe('contact search', () => {
     describe('Realizar busca por contato', () => {
-        before(() => {
-            cy.requestCreateUserAndLogin(user)
-            cy.saveLocalStorage()
+        beforeEach(() => {
+            cy.restoreLocalStorage();
         });
 
-        describe(`Dado que tenho o seguinte contato ${contact.name}`, () => {
-            before(() => {
-                cy.requestCreateContact(contact)
-            });
-
-            it('Quando faço a busca deste contato', () => {
-                cy.visitDashboard()
-                cy.searchContact(contact.number)
-                cy.validateFinishedLoading()
-            });
-
-            it('Então somente este contato deve ser exibido no dashboard', () => {
-                cy.validationOnlyOneContactDisplayed(contact)
-            });
+        it(`Dado que tenho o seguinte contato ${contact.name}`, () => {
+            cy.requestCreateUserAndLogin(user);
+            cy.requestCreateContact(contact);
+            cy.saveLocalStorage();
         });
 
-        context('Quando busco por um contato não cadastrado', () => {
-            before(() => {
-                cy.restoreLocalStorage()
-                cy.visitDashboard()
-                cy.searchContact(contactNotRegistered)
-            });
+        it('Quando faço a busca deste contato', () => {
+            cy.visitDashboard();
+            cy.searchContact(contact.number);
+            cy.validateFinishedLoading();
+        });
 
-            it(`Então a mensagem "${expectNotice}" deve ser exibida`, () => {
-                cy.emptyListValidation()
-            });
+        it('Então somente este contato deve ser exibido no dashboard', () => {
+            cy.validationOnlyOneContactDisplayed(contact);
+        });
+
+        it('Quando busco por um contato não cadastrado', () => {
+            cy.visitDashboard();
+            cy.searchContact(contactNotRegistered);
+        });
+
+        it(`Então a mensagem "${expectNotice}" deve ser exibida`, () => {
+            cy.emptyListValidation();
         });
     });
 });
+

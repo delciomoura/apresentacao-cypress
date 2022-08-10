@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 2,
-    "passes": 2,
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2022-05-23T01:40:09.861Z",
-    "end": "2022-05-23T01:40:15.590Z",
-    "duration": 5729,
-    "testsRegistered": 2,
+    "start": "2022-08-10T17:35:40.347Z",
+    "end": "2022-08-10T17:35:46.707Z",
+    "duration": 2776,
+    "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "29c9cebb-30c8-4e41-a3d4-09abfbae9e07",
+      "uuid": "6a5f46c0-f17f-4cae-9dbc-5b95a11429dc",
       "title": "",
       "fullFile": "cypress/integration/contacts/contact_remove_spec.js",
       "file": "cypress/integration/contacts/contact_remove_spec.js",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9d3df9ae-068d-430a-949b-a7653227790d",
-          "title": "Remoção de um contato",
+          "uuid": "71d5365d-c244-4735-9791-2c32b6f42107",
+          "title": "contact remove",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,18 +36,36 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "a4698857-df6a-478e-a72a-f5c53d2a1783",
-              "title": "Dado que Delcio 79qn é o contato que será deletado",
+              "uuid": "09437613-5301-4f49-98b1-d4ce5e47ef25",
+              "title": "Remoção de um contato",
               "fullFile": "",
               "file": "",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "Quando apago esse contato",
-                  "fullTitle": "Remoção de um contato Dado que Delcio 79qn é o contato que será deletado Quando apago esse contato",
+                  "title": "Dado que Delcio jmt0 é o contato que será deletado",
+                  "fullTitle": "contact remove Remoção de um contato Dado que Delcio jmt0 é o contato que será deletado",
                   "timedOut": null,
-                  "duration": 3178,
+                  "duration": 2277,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contacts/contact_remove_spec.js/Dado que Delcio jmt0 é o contato que será deletado -- after each hook.png\"",
+                  "code": "cy.requestCreateUserAndLogin(_payload.user);\ncy.requestCreateContact(_payload.contact);\ncy.saveLocalStorage();",
+                  "err": {},
+                  "uuid": "b0e2deca-7f62-4e5b-90b7-e1a5c832cc7b",
+                  "parentUUID": "09437613-5301-4f49-98b1-d4ce5e47ef25",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Quando apago esse contato",
+                  "fullTitle": "contact remove Remoção de um contato Quando apago esse contato",
+                  "timedOut": null,
+                  "duration": 463,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,16 +74,16 @@
                   "context": "\"assets/screenshots/contacts/contact_remove_spec.js/Quando apago esse contato -- after each hook.png\"",
                   "code": "cy.visitDashboard();\ncy.removeContact(_payload.contact.number);",
                   "err": {},
-                  "uuid": "a1d1e763-1c77-4d63-9948-5082feca7e06",
-                  "parentUUID": "a4698857-df6a-478e-a72a-f5c53d2a1783",
+                  "uuid": "2436d36e-4094-4900-a05f-e91b88c239f7",
+                  "parentUUID": "09437613-5301-4f49-98b1-d4ce5e47ef25",
                   "isHook": false,
                   "skipped": false
                 },
                 {
                   "title": "Então o mesmo não deve ser exibido no dashboard",
-                  "fullTitle": "Remoção de um contato Dado que Delcio 79qn é o contato que será deletado Então o mesmo não deve ser exibido no dashboard",
+                  "fullTitle": "contact remove Remoção de um contato Então o mesmo não deve ser exibido no dashboard",
                   "timedOut": null,
-                  "duration": 49,
+                  "duration": 36,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -74,21 +92,22 @@
                   "context": "\"assets/screenshots/contacts/contact_remove_spec.js/Então o mesmo não deve ser exibido no dashboard -- after each hook.png\"",
                   "code": "cy.validateIfContactWasNotFound(_payload.contact);",
                   "err": {},
-                  "uuid": "2a68cb97-e14e-47de-bc56-4b67b9494f73",
-                  "parentUUID": "a4698857-df6a-478e-a72a-f5c53d2a1783",
+                  "uuid": "867de570-3024-4739-b781-8572fee85eb9",
+                  "parentUUID": "09437613-5301-4f49-98b1-d4ce5e47ef25",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "a1d1e763-1c77-4d63-9948-5082feca7e06",
-                "2a68cb97-e14e-47de-bc56-4b67b9494f73"
+                "b0e2deca-7f62-4e5b-90b7-e1a5c832cc7b",
+                "2436d36e-4094-4900-a05f-e91b88c239f7",
+                "867de570-3024-4739-b781-8572fee85eb9"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 3227,
+              "duration": 2776,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

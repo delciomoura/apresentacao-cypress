@@ -69,6 +69,42 @@ declare namespace Cypress {
         * Verifica se o arquivo JSON foi gerado e exibe a mensagem 'Gerado com sucesso' no log
         */
         validateFileCreation(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands.js
+        *  Cypress.Commands.add("validateIfContactIsInList", (contact) => {
+                return cy.contactList().contains(contact.name)
+            });
+        *  Valida se o contato existe na lista
+        */
+        validateIfContactIsInList(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands_validation.js
+        *  Cypress.Commands.add("expectNoticeName", (notice) => {
+                return cy.alertName().contains(notice)
+            });
+        *  Valida se a mensagem foi exibida na tela
+        */
+        expectNoticeName(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands_validation.js
+        *  Cypress.Commands.add("expectNoticePhone", (notice) => {
+                return cy.alertNumber().contains(notice)
+            });
+        *  Valida se a mensagem foi exibida na tela
+        */
+        expectNoticePhone(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands_validation.js
+        *  Cypress.Commands.add("expectNoticeDescription", (notice) => {
+                return cy.alertDesc().contains(notice)
+            });
+        *  Valida se a mensagem foi exibida na tela
+        */
+        expectNoticeDescription(): Chainable<any>
 
         // ---------------------------------------------------- DOCUMENTATION COMMANDS ----------------------------------------------------
         /**
@@ -96,5 +132,58 @@ declare namespace Cypress {
         * Gera um arquivo JSON com os contatos na pasta fixtures
         */
         generateFixture(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands.js
+        *  Cypress.Commands.add("restoreLocalStorage", () => {
+                Object.keys(LOCAL_STORAGE_MEMORY).forEach(key => {
+                    localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
+                });
+            });
+        *  Restaura o LocalStorage no navegador
+        */
+        restoreLocalStorage(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands.js
+        *  Cypress.Commands.add("saveLocalStorage", () => {
+                Object.keys(localStorage).forEach(key => {
+                    LOCAL_STORAGE_MEMORY[key] = localStorage[key];
+                });
+            });
+        *  Salva o LocalStorage em um array
+        */
+        saveLocalStorage(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands.js
+        *  Cypress.Commands.add("createContact", (contact) => {
+                cy.get('[data-cy=addNewContact]').click()
+                if (contact.name) cy.get('[data-cy=name]').type(contact.name)
+                if (contact.number) cy.get('[data-cy=number]').type(contact.number)
+                if (contact.description) cy.get('[data-cy=description]').type(contact.description)
+                cy.get('[data-cy=saveButton]').click()
+            });
+        *  Clica em adicionar novo contato, inseri as informações recebidas e clica em salvar.
+        */
+        createContact(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands.js
+        *  Cypress.Commands.add("clickAddNewContactButton", () => {
+               cy.get('[data-cy=addNewContact]').click()
+            });
+        *  Clica no botão adicionar novo contato
+        */
+        clickAddNewContactButton(): Chainable<any>
+        /**
+        * @example
+        *  localizado em support/commands.js
+        *  Cypress.Commands.add("clickSaveButton", () => {
+                cy.get('[data-cy=saveButton]').click()
+            });
+        *  Clica no botão salvar
+        */
+        clickSaveButton(): Chainable<any>
     }
 }
