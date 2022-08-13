@@ -10,7 +10,7 @@ var randomCharacter = (() => {
 
 var letterNumber = randomCharacter();
 
-var randomName = `Delcio ${letterNumber}`
+var randomName = `Delcio_${letterNumber}`
 var randomEmail = `delcio${letterNumber}@gmail.com`
 
 export { randomName, randomEmail }
