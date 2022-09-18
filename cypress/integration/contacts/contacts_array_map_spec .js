@@ -1,6 +1,6 @@
 /// <reference path="../../support/index.d.ts" />
 import { user } from "../../support/payload";
-import { contacts } from "../../support/array"
+import { contacts } from "../../support/array";
 
 describe('contacts array map', () => {  
     describe('Fluxo remoção de vários contatos', () => {

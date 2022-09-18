@@ -5,6 +5,7 @@ const { contacts } = require('../../fixtures/contacts.json')
 describe('faker remove generated contacts', () => {
     describe('Remoção de vários contatos', () => {
         before(() => {
+            cy.exception()
             cy.requestCreateUserAndLogin(user)
             cy.saveLocalStorage()
         });

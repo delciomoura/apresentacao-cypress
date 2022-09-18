@@ -26,6 +26,17 @@ Cypress.Commands.add("doLogin", (email, password) => {
    if (email) cy.get('input[name=email]').type(email)
    if (password) cy.get('input[name=password]').type(password)
    cy.get('#sigIn').click()
+   cy.get('h4').contains('Seu gerenciador digital de contatos')
+});
+
+Cypress.Commands.add("doLoginSession", (email, senha) => {
+   cy.session([email, senha],() => {
+      cy.visit('http://localhost:8080/')
+      cy.get('input[name=email]').type(email)
+      cy.get('input[name=password]').type(senha)
+      cy.get('#sigIn').click()
+      cy.get('h4').contains('Seu gerenciador digital de contatos')
+   });
 });
 
 Cypress.Commands.add("loginAlert", (target) => {
@@ -55,4 +66,10 @@ Cypress.Commands.add('generateFixture', () => {
          }
       })
    });
+});
+
+Cypress.Commands.add('exception', () => {
+   Cypress.on('uncaught:exception', (err, runnable) => {
+      return false;
+    });
 });
