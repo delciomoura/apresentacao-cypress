@@ -9,10 +9,11 @@ describe('cy session', () => {
     describe('exemplos de utilização doLogin cy session', () => {
         beforeEach (() => {
             cy.exception();
-            cy.doLoginSession(email, senha);
+            cy.restoreLocalStorage();
         });
 
         it(`Removendo um contato`, () => {
+            cy.doLogin(email, senha);
             cy.visitDashboard();
             cy.createContact(contact);
             cy.removeContact(contact.number);
