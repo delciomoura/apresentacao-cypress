@@ -10,9 +10,9 @@ Este script executa testes de E2E no aplicativo [zaplink]
   - [NPM](https://www.npm.com/ "NPM")
   - [Cypress](https://www.npm.com/ "Cypress") versão 9.7.0
 
-- Open a terminal that accepts git commands.
-- Download this repository or perform a git clone (HTTPS/SSH).
-- Open the project directory using the terminal and run the following command to install the dependencies:
+- Abra um terminal que aceite comandos git.
+- Baixe este repositório ou execute um git clone (HTTPS/SSH).
+- Abra o diretório do projeto usando o terminal e execute o seguinte comando para instalar as dependências:
 ```
 npm install
 ```
