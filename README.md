@@ -8,7 +8,7 @@ Este script executa testes de E2E no aplicativo [zaplink]
 - Instale as ferramentas:
   - [NodeJS](https://nodejs.org/en/download/ "NodeJS")
   - [NPM](https://www.npm.com/ "NPM")
-  - [Cypress](https://www.npm.com/ "Cypress") versão 9.7.0
+  - [Cypress](https://www.npm.com/ "Cypress") versão 12.17.4
 
 - Abra um terminal que aceite comandos git.
 - Baixe este repositório ou execute um git clone (HTTPS/SSH).

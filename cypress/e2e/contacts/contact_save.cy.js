@@ -17,46 +17,43 @@ describe('contact save', () => {
         });
 
         it('Então esse contato deve ser cadastrado', () => {
+            cy.visitDashboard();
             cy.validateIfContactIsInList(contact);
         });
 
         it('Quando submeto um cadastro sem nome', () => {
             cy.visitDashboard();
             cy.createContact(unNamedContact);
-        });
-
-        it(`Então a notificação "${expectNoticeName}" deve ser exibida`, () => {
-            cy.expectNoticeName(expectNoticeName);
+            context(`Então a notificação "${expectNoticeName}" deve ser exibida`,() => {
+                cy.expectNoticeName(expectNoticeName);
+            });
         });
 
         it('Quando submeto um cadastro sem número do whatsapp', () => {
             cy.visitDashboard();
             cy.createContact(contactWithoutPhone);
-        });
-
-        it(`Então a notificação "${expectNoticePhone}" deve ser exibida`, () => {
-            cy.expectNoticePhone(expectNoticePhone);
+            context(`Então a notificação "${expectNoticePhone}" deve ser exibida`,() => {
+                cy.expectNoticePhone(expectNoticePhone);
+            });
         });
 
         it('Quando submeto um cadastro sem assunto', () => {
             cy.visitDashboard();
             cy.createContact(contactWithoutDescription);
-        });
-
-        it(`Então a notificação "${expectNoticeDescription}" deve ser exibida`, () => {
-            cy.expectNoticeDescription(expectNoticeDescription);
+            context(`Então a notificação "${expectNoticeDescription}" deve ser exibida`,() => {
+                cy.expectNoticeDescription(expectNoticeDescription);
+            });
         });
 
         it('Quando submeto um cadastro sem nenhum dado', () => {
             cy.visitDashboard();
             cy.clickAddNewContactButton();
             cy.clickSaveButton();
-        });
-
-        it('Então três notificações devem ser exibidas', () => {
-            cy.expectNoticeName(expectNoticeName);
-            cy.expectNoticePhone(expectNoticePhone);
-            cy.expectNoticeDescription(expectNoticeDescription);
+            context(`Então três notificações devem ser exibidas`,() => {
+                cy.expectNoticeName(expectNoticeName);
+                cy.expectNoticePhone(expectNoticePhone);
+                cy.expectNoticeDescription(expectNoticeDescription);
+            });
         });
     });
 });
