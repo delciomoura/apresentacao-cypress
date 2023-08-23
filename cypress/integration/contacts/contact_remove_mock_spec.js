@@ -10,10 +10,8 @@ describe('contact remove', () => {
 
         it(`Dado que ${contact.name} é o contato que será deletado`, () => {
             cy.intercept('POST', 'http://localhost:3000/session', {
-                statusCode: 200,
-                body: {
-                    "user_token": "61a411db08947c49e809e098"
-                }
+                statusCode: 503,
+               
             });
             cy.doLogin('delcio@delcio.com', 'delcio123');
             cy.saveLocalStorage();
@@ -35,6 +33,7 @@ describe('contact remove', () => {
             cy.intercept('DELETE', 'http://localhost:3000/contacts/62862d5c58321a9ab78c3534', {
                 statusCode: 204
             });
+            cy.visitDashboard();
             cy.removeContact(contact.number);
         });
 

@@ -1,6 +1,6 @@
 {
     "pluginsFile": "cypress/plugins/index.js",
-    "experimentalSessionAndOrigin": true,
+    "experimentalSessionAndOrigin":true,
     "reporter": "mochawesome",
     "watchForFileChanges": false,
     "reporterOptions": {

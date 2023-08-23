@@ -7,6 +7,16 @@ const senha = 'delcio123'
 
 describe('cy session', () => {
     describe('exemplos de utilização doLogin cy session', () => {
+        beforeEach(() => {
+            // cy.session([email, senha],() => {
+            //     cy.visit('http://localhost:8080/')
+            //     cy.get('input[name=email]').type(email)
+            //     cy.get('input[name=password]').type(senha)
+            //     cy.get('#sigIn').click()
+            //     cy.get('h4').contains('Seu gerenciador digital de contatos')
+            // })
+        })
+        
         it(`Removendo um contato`, () => {
             cy.doLogin(email, senha);
             cy.visitDashboard();
