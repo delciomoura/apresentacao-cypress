@@ -27,9 +27,9 @@ Cypress.Screenshot.defaults({
     screenshotOnRunFailure: false
 });
 
-// afterEach(() => {
-//     cy.screenshot()
-// });
+afterEach(() => {
+    cy.screenshot()
+});
 
 const addContext = require('mochawesome/addContext')
 

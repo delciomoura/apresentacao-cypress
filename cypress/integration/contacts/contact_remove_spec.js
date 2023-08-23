@@ -10,7 +10,7 @@ describe('contact remove', () => {
         it(`Dado que ${contact.name} é o contato que será deletado`, () => {
             cy.requestCreateUserAndLogin(user);
             cy.requestCreateContact(contact);
-            cy.saveLocalStorage();
+            cy.saveLocalStorage()
         });
 
         it('Quando apago esse contato', () => {

@@ -10,7 +10,7 @@
     "test:merge": "mochawesome-merge > mochawesome-report/report.json",
     "test:html": "marge mochawesome-report/report.json",
     "test:mv": "mv cypress/screenshots/ mochawesome-report/assets/screenshots",
-    "test:reportmv":"mv mochawesome-report/mochawesome-report/report.html mochawesome-report/report.html",
+    "test:reportmv": "mv mochawesome-report/mochawesome-report/report.html mochawesome-report/report.html",
     "test:report": "npm run test:one & npm run test:merge & npm run test:html & npm run test:mv & npm run test:reportmv"
   },
   "author": "",
@@ -23,8 +23,8 @@
     "cypress": "^9.7.0",
     "cypress-localstorage-commands": "^1.7.0",
     "faker": "^5.5.3",
-    "mocha": "8.1.3",
-    "mochawesome": "6.1.1",
+    "mocha": "^10.1.0",
+    "mochawesome": "^7.1.3",
     "mochawesome-merge": "4.2.0",
     "vue": "^2.6.14",
     "vue-router": "3.2.0"
