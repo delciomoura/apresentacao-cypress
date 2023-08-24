@@ -1,20 +1,40 @@
 import "cypress-localstorage-commands"
 
+Cypress.Commands.add("clickAddNewContactButton", () => {
+   cy.addNewContact().click();
+});
+
+Cypress.Commands.add("clickSaveButton", () => {
+   cy.saveButton().click();
+});
+
+Cypress.Commands.add("insertName", (name) => {
+   cy.name().type(name);
+});
+
+Cypress.Commands.add("insertNumber", (number) => {
+   cy.number().type(number);
+});
+
+Cypress.Commands.add("insertDescription", (description) => {
+   cy.description().type(description);
+});
+
 Cypress.Commands.add("createContact", (contact) => {
-   cy.get('[data-cy=addNewContact]').click()
-   if (contact.name) cy.get('[data-cy=name]').type(contact.name)
-   if (contact.number) cy.get('[data-cy=number]').type(contact.number)
-   if (contact.description) cy.get('[data-cy=description]').type(contact.description)
-   cy.get('[data-cy=saveButton]').click()
+   cy.clickAddNewContactButton();
+   if (contact.name) cy.insertName(contact.name);
+   if (contact.number) cy.insertNumber(contact.number);
+   if (contact.description) cy.insertDescription(contact.description);
+   cy.clickSaveButton();
 });
 
 Cypress.Commands.add("searchContact", (number) => {
-   cy.get('.level-right input').type(number)
-   cy.get('.level-right button.is-primary').click()
+   cy.get('.level-right input').type(number);
+   cy.get('.level-right button.is-primary').click();
 });
 
 Cypress.Commands.add("getContact", (target) => {
-   return cy.contains('.card', target)
+   return cy.contains('.card', target);
 });
 
 Cypress.Commands.add("removeContact", (target) => {
@@ -41,14 +61,6 @@ Cypress.Commands.add("doLoginSession", (email, senha) => {
 
 Cypress.Commands.add("loginAlert", (target) => {
    return cy.contains('.message-body', target)
-});
-
-Cypress.Commands.add("clickAddNewContactButton", () => {
-   cy.get('[data-cy=addNewContact]').click()
-});
-
-Cypress.Commands.add("clickSaveButton", () => {
-   cy.get('[data-cy=saveButton]').click()
 });
 
 Cypress.Commands.add('preserveSession', () => {

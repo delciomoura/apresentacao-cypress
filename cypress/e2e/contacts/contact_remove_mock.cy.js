@@ -1,7 +1,7 @@
 /// <reference path="../../support/index.d.ts" />
 import { contact } from "../../support/payload";
 
-describe('contact remove', () => {
+describe('contact remove mock', () => {
     describe('Remoção de um contato', () => {
         beforeEach(() => {
             cy.restoreLocalStorage();
@@ -9,10 +9,6 @@ describe('contact remove', () => {
         });
 
         it(`Dado que ${contact.name} é o contato que será deletado`, () => {
-            cy.intercept('POST', 'http://localhost:3000/session', {
-                statusCode: 503,
-               
-            });
             cy.doLogin('delcio@delcio.com', 'delcio123');
             cy.saveLocalStorage();
         });

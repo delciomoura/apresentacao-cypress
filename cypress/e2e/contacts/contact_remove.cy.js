@@ -10,7 +10,7 @@ describe('contact remove', () => {
         it(`Dado que ${contact.name} é o contato que será deletado`, () => {
             cy.requestCreateUserAndLogin(user);
             cy.requestCreateContact(contact);
-            cy.saveLocalStorage()
+            cy.saveLocalStorage();
         });
 
         it('Quando apago esse contato', () => {
@@ -19,6 +19,7 @@ describe('contact remove', () => {
         });
 
         it('Então o mesmo não deve ser exibido no dashboard', () => {
+            cy.visitDashboard();
             cy.validateIfContactWasNotFound(contact);
         });
 
