@@ -6,12 +6,12 @@
   "scripts": {
     "test": "cypress open",
     "test:headless": "cypress run",
-    "test:one": "cypress run --spec cypress/integration/contacts/contact_remove_spec.js",
+    "test:one": "cypress run --spec cypress/e2e/contacts/contact_remove.cy.js",
     "test:merge": "mochawesome-merge > mochawesome-report/report.json",
     "test:html": "marge mochawesome-report/report.json",
     "test:mv": "mv cypress/screenshots/ mochawesome-report/assets/screenshots",
     "test:reportmv": "mv mochawesome-report/mochawesome-report/report.html mochawesome-report/report.html",
-    "test:report": "npm run test:one & npm run test:merge & npm run test:html & npm run test:mv & npm run test:reportmv"
+    "test:report": "npm run test:merge & npm run test:html & npm run test:mv & npm run test:reportmv"
   },
   "author": "",
   "license": "ISC",

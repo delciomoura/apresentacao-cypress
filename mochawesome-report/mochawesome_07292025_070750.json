@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-29T10:55:47.543Z",
+    "end": "2025-07-29T10:55:50.017Z",
+    "duration": 2474,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5b4c29e0-72ec-4863-94e3-c7c0d8ef0e5a",
+      "title": "",
+      "fullFile": "cypress/e2e/contacts/contact_talk.cy.js",
+      "file": "cypress/e2e/contacts/contact_talk.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5658a655-5972-4623-bea5-1370c08b0970",
+          "title": "contact talk",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "81e24ded-10a2-4914-b13a-bb77575e854a",
+              "title": "Start a conversation with a contact",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Given that Natanael Moreira is the desired contact",
+                  "fullTitle": "contact talk Start a conversation with a contact Given that Natanael Moreira is the desired contact",
+                  "timedOut": null,
+                  "duration": 1405,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_talk.cy.js/Given that Natanael Moreira is the desired contact -- after each hook.png\"",
+                  "code": "cy.requestCreateUserAndLogin(_payload.user);\ncy.requestCreateContact(_payload.contact);\ncy.saveLocalStorage();",
+                  "err": {},
+                  "uuid": "4b5d8365-7972-4249-8ab8-8c68af6cf39c",
+                  "parentUUID": "81e24ded-10a2-4914-b13a-bb77575e854a",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Then should I see the href property with the whatsapp web link",
+                  "fullTitle": "contact talk Start a conversation with a contact Then should I see the href property with the whatsapp web link",
+                  "timedOut": null,
+                  "duration": 213,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_talk.cy.js/Then should I see the href property with the whatsapp web link -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.externalLinkValidation(_payload.contact);",
+                  "err": {},
+                  "uuid": "a3fe53c7-f39f-4638-95e7-6f2bdeb715ca",
+                  "parentUUID": "81e24ded-10a2-4914-b13a-bb77575e854a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4b5d8365-7972-4249-8ab8-8c68af6cf39c",
+                "a3fe53c7-f39f-4638-95e7-6f2bdeb715ca"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1618,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_hhmmss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

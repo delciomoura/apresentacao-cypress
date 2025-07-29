@@ -1,3 +1,5 @@
+import notices from "../fixtures/parameters.json";
+
 Cypress.Commands.add("validateIfContactWasNotFound", (contact) => {
   cy.getContact(contact.number).should("not.exist");
 });
@@ -23,9 +25,9 @@ Cypress.Commands.add("validateFinishedLoading", () => {
 });
 
 Cypress.Commands.add("validationOnlyOneContactDisplayed", (contact) => {
-  cy.get(".card").should("have.length", 1);
-  cy.get(".card").contains(contact.name);
-  cy.get(".card").contains(contact.description);
+  cy.card().should("have.length", 1);
+  cy.card().contains(contact.name);
+  cy.card().contains(contact.description);
 });
 
 Cypress.Commands.add("emptyListValidation", () => {
@@ -33,12 +35,11 @@ Cypress.Commands.add("emptyListValidation", () => {
 });
 
 Cypress.Commands.add("externalLinkValidation", (contact) => {
-  const externalLink = `https://api.whatsapp.com/send?phone=55${contact.number}`;
-  cy.cardFooterItem(contact.number).should("have.attr", "href", externalLink);
+  cy.cardFooterItem(contact.number).should("have.attr", "href", `${Cypress.env('linkApiWhatsapp')}${contact.number}`);
 });
 
 Cypress.Commands.add("dashboardValidation", () => {
-  cy.contains("h4", "Seu gerenciador digital de contatos").should("be.visible");
+  cy.contains("h4", notices.message.expectMessageAfterLogin).should("be.visible");
 });
 
 Cypress.Commands.add("validateFileCreation", () => {

@@ -1,0 +1,220 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-29T10:55:26.806Z",
+    "end": "2025-07-29T10:55:35.076Z",
+    "duration": 8270,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a375dc1b-8c9d-446e-be6d-6ff684d32570",
+      "title": "",
+      "fullFile": "cypress/e2e/contacts/contact_save.cy.js",
+      "file": "cypress/e2e/contacts/contact_save.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "028bcbcf-3520-47fe-ac2f-b201b9533953",
+          "title": "contact save",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "83fd5102-f151-4697-9dfa-7876be4e3ad8",
+              "title": "Register contacts",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Given that I submit a registration filling in all the necessary data",
+                  "fullTitle": "contact save Register contacts Given that I submit a registration filling in all the necessary data",
+                  "timedOut": null,
+                  "duration": 2601,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_save.cy.js/Given that I submit a registration filling in all the necessary data -- after each hook.png\"",
+                  "code": "cy.requestCreateUserAndLogin(_payload.user);\ncy.visitDashboard();\ncy.createContact(_payload.contact);\ncy.saveLocalStorage();",
+                  "err": {},
+                  "uuid": "ba6e9a83-6831-4e68-a45e-ee58ac22843b",
+                  "parentUUID": "83fd5102-f151-4697-9dfa-7876be4e3ad8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Then this contact must be registered",
+                  "fullTitle": "contact save Register contacts Then this contact must be registered",
+                  "timedOut": null,
+                  "duration": 198,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_save.cy.js/Then this contact must be registered -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.validateIfContactIsInList(_payload.contact);",
+                  "err": {},
+                  "uuid": "9f3a590f-9187-46da-9b75-a9c35eefbf31",
+                  "parentUUID": "83fd5102-f151-4697-9dfa-7876be4e3ad8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "When I submit a registration without a name",
+                  "fullTitle": "contact save Register contacts When I submit a registration without a name",
+                  "timedOut": null,
+                  "duration": 923,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_save.cy.js/When I submit a registration without a name -- after each hook.png\"",
+                  "code": "const {\n    name\n  } = _payload.contact,\n  contactWithoutName = (0, _objectWithoutProperties2.default)(_payload.contact, _excluded);\ncy.visitDashboard();\ncy.createContact(contactWithoutName);\ncontext(`Then the notification \"${_parameters.default.message.expectNoticeName}\" must be displayed`, () => {\n  cy.expectNoticeName(_parameters.default.message.expectNoticeName);\n});",
+                  "err": {},
+                  "uuid": "9d082b75-892f-4516-87ef-4cdaee2059e7",
+                  "parentUUID": "83fd5102-f151-4697-9dfa-7876be4e3ad8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "When I submit a registration without a WhatsApp number",
+                  "fullTitle": "contact save Register contacts When I submit a registration without a WhatsApp number",
+                  "timedOut": null,
+                  "duration": 903,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_save.cy.js/When I submit a registration without a WhatsApp number -- after each hook.png\"",
+                  "code": "const {\n    number\n  } = _payload.contact,\n  contactWithoutNumber = (0, _objectWithoutProperties2.default)(_payload.contact, _excluded2);\ncy.visitDashboard();\ncy.createContact(contactWithoutNumber);\ncontext(`Then the notification \"${_parameters.default.message.expectNoticePhone}\" must be displayed`, () => {\n  cy.expectNoticePhone(_parameters.default.message.expectNoticePhone);\n});",
+                  "err": {},
+                  "uuid": "dd8c2aa8-552a-4c58-a0d9-d1d112d3daa9",
+                  "parentUUID": "83fd5102-f151-4697-9dfa-7876be4e3ad8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "When I submit a registration without a subject",
+                  "fullTitle": "contact save Register contacts When I submit a registration without a subject",
+                  "timedOut": null,
+                  "duration": 839,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_save.cy.js/When I submit a registration without a subject -- after each hook.png\"",
+                  "code": "const {\n    description\n  } = _payload.contact,\n  contactWithoutDescription = (0, _objectWithoutProperties2.default)(_payload.contact, _excluded3);\ncy.visitDashboard();\ncy.createContact(contactWithoutDescription);\ncontext(`Then the notification \"${_parameters.default.message.expectNoticeDescription}\" must be displayed`, () => {\n  cy.expectNoticeDescription(_parameters.default.message.expectNoticeDescription);\n});",
+                  "err": {},
+                  "uuid": "f3c5ae67-465d-49f1-b0e6-f7951eacb498",
+                  "parentUUID": "83fd5102-f151-4697-9dfa-7876be4e3ad8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "When I submit a registration without any data",
+                  "fullTitle": "contact save Register contacts When I submit a registration without any data",
+                  "timedOut": null,
+                  "duration": 203,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_save.cy.js/When I submit a registration without any data -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.clickAddNewContactButton();\ncy.clickSaveButton();\ncontext(`Then three notifications should be displayed`, () => {\n  cy.expectNoticeName(_parameters.default.message.expectNoticeName);\n  cy.expectNoticePhone(_parameters.default.message.expectNoticePhone);\n  cy.expectNoticeDescription(_parameters.default.message.expectNoticeDescription);\n});",
+                  "err": {},
+                  "uuid": "ab089ea8-e5d4-4f46-b3ba-2ed2f8133e41",
+                  "parentUUID": "83fd5102-f151-4697-9dfa-7876be4e3ad8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ba6e9a83-6831-4e68-a45e-ee58ac22843b",
+                "9f3a590f-9187-46da-9b75-a9c35eefbf31",
+                "9d082b75-892f-4516-87ef-4cdaee2059e7",
+                "dd8c2aa8-552a-4c58-a0d9-d1d112d3daa9",
+                "f3c5ae67-465d-49f1-b0e6-f7951eacb498",
+                "ab089ea8-e5d4-4f46-b3ba-2ed2f8133e41"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5667,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_hhmmss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

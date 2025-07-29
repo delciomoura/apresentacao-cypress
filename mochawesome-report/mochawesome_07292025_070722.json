@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-29T10:55:20.370Z",
+    "end": "2025-07-29T10:55:22.921Z",
+    "duration": 2551,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8c22c7f6-8b71-43d6-94e0-e931b5bdb5ce",
+      "title": "",
+      "fullFile": "cypress/e2e/contacts/contact_remove_mock.cy.js",
+      "file": "cypress/e2e/contacts/contact_remove_mock.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e09bd891-fe8d-42f6-b637-d9599726a732",
+          "title": "contact remove mock",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "79612f49-93a4-419b-8da2-b4bc81f39135",
+              "title": "Test contact removal (Mock)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Given that Alexinaldo Martins is the contact that will be deleted",
+                  "fullTitle": "contact remove mock Test contact removal (Mock) Given that Alexinaldo Martins is the contact that will be deleted",
+                  "timedOut": null,
+                  "duration": 1030,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_remove_mock.cy.js/Given that Alexinaldo Martins is the contact that will be deleted -- after each hook.png\"",
+                  "code": "cy.doLogin(Cypress.env(\"user\"), Cypress.env(\"password\"));\ncy.saveLocalStorage();",
+                  "err": {},
+                  "uuid": "73b05512-fcc2-464f-b58a-568aeaf7dfec",
+                  "parentUUID": "79612f49-93a4-419b-8da2-b4bc81f39135",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "When I delete this contact",
+                  "fullTitle": "contact remove mock Test contact removal (Mock) When I delete this contact",
+                  "timedOut": null,
+                  "duration": 253,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_remove_mock.cy.js/When I delete this contact -- after each hook.png\"",
+                  "code": "cy.intercept(\"GET\", `${Cypress.env(\"baseUrlBackEnd\")}/contacts`, {\n  statusCode: 200,\n  body: [_payload.bodyContactMock]\n});\ncy.intercept(\"DELETE\", `${Cypress.env(\"baseUrlBackEnd\")}/contacts/${_payload.bodyContactMock._id}`, {\n  statusCode: 204\n});\ncy.visitDashboard();\ncy.removeContact(_payload.bodyContactMock.number);",
+                  "err": {},
+                  "uuid": "f929c6d1-552b-406b-a326-1285453b4a7f",
+                  "parentUUID": "79612f49-93a4-419b-8da2-b4bc81f39135",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Then it should no longer be displayed on the dashboard",
+                  "fullTitle": "contact remove mock Test contact removal (Mock) Then it should no longer be displayed on the dashboard",
+                  "timedOut": null,
+                  "duration": 65,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "\"assets/screenshots/contact_remove_mock.cy.js/Then it should no longer be displayed on the dashboard -- after each hook.png\"",
+                  "code": "cy.visitDashboard();\ncy.intercept(\"GET\", `${Cypress.env(\"baseUrlBackEnd\")}/contacts`, {\n  statusCode: 200,\n  body: []\n});\ncy.validateIfContactWasNotFound(_payload.bodyContactMock);",
+                  "err": {},
+                  "uuid": "19361fc5-e225-463f-b5d8-fe1c284fcdb4",
+                  "parentUUID": "79612f49-93a4-419b-8da2-b4bc81f39135",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "73b05512-fcc2-464f-b58a-568aeaf7dfec",
+                "f929c6d1-552b-406b-a326-1285453b4a7f",
+                "19361fc5-e225-463f-b5d8-fe1c284fcdb4"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1348,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_hhmmss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

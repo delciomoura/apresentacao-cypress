@@ -82,5 +82,9 @@ Cypress.Commands.add("dashboard", () => {
     cy.get('.dashboard');
 });
 
+Cypress.Commands.add("card", () => {
+    cy.get(".card");
+});
+
 
 

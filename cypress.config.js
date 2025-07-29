@@ -13,6 +13,7 @@ module.exports = defineConfig({
   },
   env: {
     baseUrlBackEnd: 'http://localhost:3000',
+    linkApiWhatsapp: 'https://api.whatsapp.com/send?phone=55',
     user: 'junior@delcio.com.br',
     password: 'delcio123'
   },

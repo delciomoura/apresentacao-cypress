@@ -2,7 +2,7 @@ import { contact } from "../../support/payload";
 import notices from "../../fixtures/parameters.json";
 
 describe("cy session", () => {
-  describe("exemplos de utilização doLogin cy session", () => {
+  describe("Examples of using Login cy session", () => {
     beforeEach(() => {
       cy.exception();
       cy.doLoginSession(Cypress.env("user"), Cypress.env("password"));
