@@ -11,11 +11,16 @@ module.exports = defineConfig({
     json: true,
     timestamp: 'mmddyyyy_hhmmss',
   },
+  env: {
+    baseUrlBackEnd: 'http://localhost:3000',
+    user: 'junior@delcio.com.br',
+    password: 'delcio123'
+  },
   e2e: {
     baseUrl: 'http://localhost:8080',
     experimentalRunAllSpecs: true,
     setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config)
+      
     },
   },
 })

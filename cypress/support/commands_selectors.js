@@ -45,3 +45,42 @@ Cypress.Commands.add("addNewContact", () => {
 Cypress.Commands.add("messageBody", () => {
     cy.get('.message-body');
 });
+
+Cypress.Commands.add("loader", () => {
+    cy.get('[alt="Loader"]');
+});
+
+Cypress.Commands.add("cardFooterItem", () => {
+    cy.get('[class="card-footer-item"]');
+});
+
+Cypress.Commands.add("levelRightInput", () => {
+    cy.get('.level-right input');
+});
+
+Cypress.Commands.add("levelRightButtonIsPrimary", () => {
+    cy.get('.level-right button.is-primary');
+});
+
+Cypress.Commands.add("inputNameEmail", () => {
+    cy.get('input[name=email]');
+});
+
+Cypress.Commands.add("inputNamePassword", () => {
+    cy.get('input[name=password]');
+});
+
+Cypress.Commands.add("sigIn", () => {
+    cy.get('#sigIn');
+});
+
+Cypress.Commands.add("h4", () => {
+    cy.get('h4');
+});
+
+Cypress.Commands.add("dashboard", () => {
+    cy.get('.dashboard');
+});
+
+
+

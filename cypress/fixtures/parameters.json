@@ -6,7 +6,8 @@
         "expectNotice": "Contato não encontrato",
         "expectMessage": "Email e/ou senha incorreto",
         "expectMessageEmail": "Oops. por favor informe seu e-mail",
-        "expectMessagePassword": "Oops. por favor informe sua senha"
+        "expectMessagePassword": "Oops. por favor informe sua senha",
+        "expectMessageAfterLogin": "Seu gerenciador digital de contatos"
     },
 
     "parameters": {

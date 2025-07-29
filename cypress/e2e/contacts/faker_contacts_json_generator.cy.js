@@ -1,11 +1,10 @@
-/// <reference path="../../support/index.d.ts" />
 describe ('faker contacts json generator',() => {
-    describe('Dado que gero um arquivo JSON com os contatos',() => {
+    describe('Given that I generate a JSON file with the contacts',() => {
         before(() => {
             cy.generateFixture();
         });    
     
-        it('Então o arquivo deve ser gerado com sucesso',() => {
+        it('Then the file should be generated successfully',() => {
             cy.validateFileCreation();
         });
     });

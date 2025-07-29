@@ -1,52 +1,55 @@
 import { user } from "../../support/payload";
 import notices from "../../fixtures/parameters.json";
-const { expectMessage, expectMessageEmail, expectMessagePassword } = notices.message || {};
-const { wrongPassword, emptyEmail, emptyPassword } = notices.parameters || {};
 
-describe('login', () => {    
-    describe('Realizar login', () => {
-        before(() => {
-            cy.requestCreateUser(user)
-        });
-
-        context('Dado que submeto credenciais validas', () => {
-            before(() => {
-                cy.doLogin(user.email, user.password)
-            });
-
-            it('Então o usuário deve ser direcionado para área logada', () => {
-                cy.dashboardValidation()
-            });
-        });
-
-        context('Quando submeto uma senha incorreta', () => {
-            before(() => {
-                cy.doLogin(user.email, wrongPassword)
-            });
-
-            it(`Então a notificação "${expectMessage}" deve ser exibida`, () => {
-                cy.loginAlert(expectMessage).should('be.visible')
-            });
-        });
-
-        context('Quando não informo o email', () => {
-            before(() => {
-                cy.doLogin(emptyEmail, wrongPassword)
-            });
-
-            it(`Então a notificação "${expectMessageEmail}" deve ser exibida`, () => {
-                cy.loginAlert(expectMessageEmail).should('be.visible')
-            });
-        });
-
-        context('Quando não informo a senha', () => {
-            before(() => {
-                cy.doLogin(user.email, emptyPassword)
-            });
-
-            it(`Então a notificação "${expectMessagePassword}" deve ser exibida`, () => {
-                cy.loginAlert(expectMessagePassword).should('be.visible')
-            });
-        });
+describe("login", () => {
+  describe("Login", () => {
+    before(() => {
+      cy.requestCreateUser(user);
     });
+
+    context("Given that I submit valid credentials", () => {
+      before(() => {
+        cy.doLogin(user.email, user.password);
+      });
+
+      it("Then the user should be directed to the logged in area", () => {
+        cy.dashboardValidation();
+      });
+    });
+
+    context("When I submit an incorrect password", () => {
+      before(() => {
+        cy.doLogin(user.email, notices.parameters.wrongPassword);
+      });
+
+      it(`Then the notification "${notices.message.expectMessage}" must be displayed`, () => {
+        cy.loginAlert(notices.message.expectMessage).should("be.visible");
+      });
+    });
+
+    context("When I don't provide the email", () => {
+      before(() => {
+        cy.doLogin(
+          notices.parameters.emptyEmail,
+          notices.parameters.wrongPassword
+        );
+      });
+
+      it(`Then the notification "${notices.message.expectMessageEmail}" must be displayed`, () => {
+        cy.loginAlert(notices.message.expectMessageEmail).should("be.visible");
+      });
+    });
+
+    context("When I don't enter the password", () => {
+      before(() => {
+        cy.doLogin(user.email, notices.parameters.emptyPassword);
+      });
+
+      it(`Then the notification "${notices.message.expectMessagePassword}" must be displayed`, () => {
+        cy.loginAlert(notices.message.expectMessagePassword).should(
+          "be.visible"
+        );
+      });
+    });
+  });
 });

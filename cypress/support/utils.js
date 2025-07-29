@@ -1,16 +1,5 @@
-var randomCharacter = (() => {
-    var length = 4,
-        charset = "abcdefghijklmnopqrstuvwxyz0123456789",
-        letterNumber = "";
-    for (var i = 0, n = charset.length; i < length; ++i) {
-        letterNumber += charset.charAt(Math.floor(Math.random() * n));
-    }
-    return letterNumber;
-});
+const fakerBR = require('faker-br');
 
-var letterNumber = randomCharacter();
+export const randomName = `${fakerBR.name.firstName()} ${fakerBR.name.lastName()}`;
+export const randomEmail = fakerBR.internet.email();
 
-var randomName = `Delcio_${letterNumber}`
-var randomEmail = `delcio${letterNumber}@gmail.com`
-
-export { randomName, randomEmail }

@@ -1,33 +1,42 @@
 # apresentacao-cypress
-Projeto criado para exemplificar testes E2E com cypress
 
-### O que esse script faz?
-Este script executa testes de E2E no aplicativo [zaplink]
+Project created to demonstrate E2E testing with Cypress
 
-### Instalação
-- Instale as ferramentas:
-  - [NodeJS](https://nodejs.org/en/download/ "NodeJS")
-  - [NPM](https://www.npm.com/ "NPM")
-  - [Cypress](https://www.npm.com/ "Cypress") versão 12.17.4
+### What does this script do?
 
-- Abra um terminal que aceite comandos git.
-- Baixe este repositório ou execute um git clone (HTTPS/SSH).
-- Abra o diretório do projeto usando o terminal e execute o seguinte comando para instalar as dependências:
+This script runs E2E tests on the \[zaplink] application.
+
+### Installation
+
+Install the following tools:
+    - [NodeJS](https://nodejs.org/en/download/ "NodeJS")
+    - [NPM](https://www.npm.com/ "NPM")
+    - [Cypress](https://www.npm.com/ "Cypress") version 14.5.2
+
+Open a terminal that supports Git commands.
+
+Download this repository or run a Git clone (HTTPS/SSH).
+
+Open the project directory using the terminal and run the following command to install the dependencies:
+
 ```
 npm install
 ```
 
-- Para verificar se você possui as versões instaladas, digite o seguinte no terminal:
+To check if you have the required versions installed, type the following in the terminal:
+
 ```
 npm -v && node -v
 ```
 
-- Para abrir a interface gráfica do Cypress e escolher quais testes executar, digite o seguinte no terminal:
+To open Cypress's graphical interface and select which tests to run, type the following in the terminal:
+
 ```
 npm test
 ```
 
-- Para executar todos os testes no modo headless, digite o seguinte no terminal:
+To run all tests in headless mode, type the following in the terminal:
+
 ```
 npm run test:headless
 ```

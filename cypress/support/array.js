@@ -1,8 +1,6 @@
-// import notices from "../fixtures/parameters.json";
-// const { expectNoticeName, expectNoticePhone, expectNoticeDescription } = notices.message || {};
 const faker = require('faker')
 
-const contacts = [
+export const contactsArray = [
     {
         'name': `${faker.name.firstName("male")} ${faker.name.lastName()}`,
         'number': `${faker.phone.phoneNumber('(84) 9####-####')}`,
@@ -29,5 +27,3 @@ const contacts = [
         'description': `${faker.lorem.words(1)}`
     }
 ]
-
-export { contacts }

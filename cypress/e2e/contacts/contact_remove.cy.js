@@ -1,27 +1,25 @@
-/// <reference path="../../support/index.d.ts" />
 import { user, contact } from "../../support/payload";
 
-describe('contact remove', () => {
-    describe('Remoção de um contato', () => {
-        beforeEach (() => {
-            cy.restoreLocalStorage();
-        });
-
-        it(`Dado que ${contact.name} é o contato que será deletado`, () => {
-            cy.requestCreateUserAndLogin(user);
-            cy.requestCreateContact(contact);
-            cy.saveLocalStorage();
-        });
-
-        it('Quando apago esse contato', () => {
-            cy.visitDashboard();
-            cy.removeContact(contact.number);
-        });
-
-        it('Então o mesmo não deve ser exibido no dashboard', () => {
-            cy.visitDashboard();
-            cy.validateIfContactWasNotFound(contact);
-        });
-
+describe("contact remove", () => {
+  describe("Removing a contact", () => {
+    beforeEach(() => {
+      cy.restoreLocalStorage();
     });
+
+    it(`Given that ${contact.name} is the contact that will be deleted`, () => {
+      cy.requestCreateUserAndLogin(user);
+      cy.requestCreateContact(contact);
+      cy.saveLocalStorage();
+    });
+
+    it("When I delete this contact", () => {
+      cy.visitDashboard();
+      cy.removeContact(contact.number);
+    });
+
+    it("Then it should not be displayed on the dashboard", () => {
+      cy.visitDashboard();
+      cy.validateIfContactWasNotFound(contact);
+    });
+  });
 });

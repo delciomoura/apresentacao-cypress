@@ -1,58 +1,57 @@
-/// <reference path="../../support/index.d.ts" />
-import { contact, contactWithoutPhone, contactWithoutDescription, unNamedContact  } from "../../support/payload";
+import { contact } from "../../support/payload";
 import notices from "../../fixtures/parameters.json";
-const { expectNoticeName, expectNoticePhone, expectNoticeDescription } = notices.message || {};
-const email = 'junior@delcio.com.br'
-const senha = 'delcio123'
 
-describe('cy session', () => {
-    describe('exemplos de utilização doLogin cy session', () => {
-        beforeEach (() => {
-            cy.exception();
-            cy.restoreLocalStorage();
-        });
-
-        it(`Removendo um contato`, () => {
-            cy.doLogin(email, senha);
-            cy.visitDashboard();
-            cy.createContact(contact);
-            cy.removeContact(contact.number);
-            cy.validateIfContactWasNotFound(contact);
-            cy.saveLocalStorage();
-        });
-
-        it(`Criando um contato com todos os dados`, () => {
-            cy.visitDashboard();
-            cy.createContact(contact);
-            cy.validateIfContactIsInList(contact);
-            cy.removeContact(contact.number);
-        });
-
-        it('Criando contato sem nome', () => {
-            cy.visitDashboard();
-            cy.createContact(unNamedContact);
-            cy.expectNoticeName(expectNoticeName);
-        });
-
-        it('Criando um contato sem número de whatsapp', () => {
-            cy.visitDashboard();
-            cy.createContact(contactWithoutPhone);
-            cy.expectNoticePhone(expectNoticePhone);
-        });
-
-        it('Criando um contato sem assunto', () => {
-            cy.visitDashboard();
-            cy.createContact(contactWithoutDescription);
-            cy.expectNoticeDescription(expectNoticeDescription);
-        });
-
-        it('Criando um contato sem preencher nenhuma informação', () => {
-            cy.visitDashboard();
-            cy.clickAddNewContactButton();
-            cy.clickSaveButton();
-            cy.expectNoticeName(expectNoticeName);
-            cy.expectNoticePhone(expectNoticePhone);
-            cy.expectNoticeDescription(expectNoticeDescription);
-        });
+describe("cy session", () => {
+  describe("Login example saving to localstorage", () => {
+    beforeEach(() => {
+      cy.exception();
+      cy.restoreLocalStorage();
     });
+
+    it(`Removing a contact`, () => {
+      cy.doLogin(Cypress.env("user"), Cypress.env("password"));
+      cy.visitDashboard();
+      cy.createContact(contact);
+      cy.removeContact(contact.number);
+      cy.validateIfContactWasNotFound(contact);
+      cy.saveLocalStorage();
+    });
+
+    it(`Creating a contact with all data`, () => {
+      cy.visitDashboard();
+      cy.createContact(contact);
+      cy.validateIfContactIsInList(contact);
+      cy.removeContact(contact.number);
+    });
+
+    it("Creating unnamed contact", () => {
+      const { name, ...contactWithoutName } = contact;
+      cy.visitDashboard();
+      cy.createContact(contactWithoutName);
+      cy.expectNoticeName(notices.message.expectNoticeName);
+    });
+
+    it("Creating a contact without a WhatsApp number", () => {
+      const { number, ...contactWithoutPhone } = contact;
+      cy.visitDashboard();
+      cy.createContact(contactWithoutPhone);
+      cy.expectNoticePhone(notices.message.expectNoticePhone);
+    });
+
+    it("Creating a contact without a subject", () => {
+      const { description, ...contactWithoutDescription } = contact;
+      cy.visitDashboard();
+      cy.createContact(contactWithoutDescription);
+      cy.expectNoticeDescription(notices.message.expectNoticeDescription);
+    });
+
+    it("Creating a contact without filling in any information", () => {
+      cy.visitDashboard();
+      cy.clickAddNewContactButton();
+      cy.clickSaveButton();
+      cy.expectNoticeName(notices.message.expectNoticeName);
+      cy.expectNoticePhone(notices.message.expectNoticePhone);
+      cy.expectNoticeDescription(notices.message.expectNoticeDescription);
+    });
+  });
 });
